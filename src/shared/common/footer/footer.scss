@@ -1,0 +1,72 @@
+@import '../../../styles/global.scss';
+
+.footer
+{
+    padding: 50px;
+    width: 100%;
+    background-color: var(--theme-footer-bg-black);
+
+    @media screen and (max-width : 768px) {
+        padding: 20px;
+    }
+
+    @media screen and (max-width : 320px) {
+        padding: 20px 10px;
+    }
+    
+    .firstFooterDescription
+    {
+        padding-top: 20px;
+
+        p{
+            text-align: center;
+            font-size: 16px;
+            color: var(--theme-text-color-white);
+            max-width: 450px;
+            margin: 0 auto;
+            line-height: 30px;
+
+            @media screen and (max-width : 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+    .secondFooterDescription
+    {
+        padding-top: 40px;
+
+        
+        @media screen and (max-width : 768px) {
+            padding-top: 20px;
+        }
+
+        @media screen and (max-width : 320px) {
+            padding-top: 5px;
+        }
+
+        span{
+            text-align: center;
+            font-size: 16px;
+            color: var(--theme-text-color-white);
+            max-width: 450px;
+            margin: 0 auto;
+            line-height: 30px;
+            display: block;
+            
+            @media screen and (max-width : 768px) {
+                font-size: 14px;
+                word-wrap: break-word;
+            }
+            
+            a{
+                color: var( --theme-link-color-lightblue);
+                padding: 3px;
+
+                &:hover
+                {
+                    color: var(--theme-link-color-orange);
+                }
+            }
+        }
+    }
+}

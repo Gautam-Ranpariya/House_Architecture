@@ -1,0 +1,21 @@
+@import '../../../styles/global.scss';
+
+.inputUserEmail
+{   
+    width: 100%;
+    
+    .inputEmail{
+        color: var(--theme-color-black);
+        border: none;
+        outline: none;
+        height: auto;
+        @include input-text-18;
+        width: 100%;
+        background-color: var( --theme-header-bg-white);
+        
+        &:focus
+        {
+            background-color: var(--theme-header-bg-white);
+        }
+    }
+}

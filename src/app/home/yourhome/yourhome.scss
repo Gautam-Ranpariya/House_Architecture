@@ -1,0 +1,103 @@
+@import '../../../styles/global.scss';
+
+.yourHome {
+    background-color: var(--theme-bg-white);
+    // min-height: 600px;
+    // padding: 30px;
+
+    .container {
+        height: auto;
+        width: 100%;
+        padding: 0;
+
+        .innerYourHome {
+            width: 100%;
+            height: 100%;
+            @include your-home-grid2;
+
+            @media screen and (max-width : 768px) {
+                grid-template-columns: 1fr;
+            }
+
+            .dreamHome {
+                padding-left: 50px;
+                @include flex-start-center;
+                flex-direction: column;
+
+                @media screen and (max-width : 1024px) {
+                    padding: 10px;
+                    padding-left: 30px;
+                }
+
+                p:nth-child(1) {
+                    text-align: left;
+                    font-size: 18px;
+                    letter-spacing: 2px;
+                    margin: 20px 0 10px;
+                    color: var(--theme-color-black);
+
+                    @media screen and (max-width : 480px) {
+                        font-size: 16px;
+                    }
+                }
+
+                h6 {
+                    @include Heading-Text-xl;
+                    color: var(--theme-heading-color-orange);
+                    margin-bottom: 20px;
+                    text-align: left;
+
+                    @media screen and (max-width : 768px) {
+                        font-size: 42px;
+                    }
+
+                    @media screen and (max-width : 576px) {
+                        font-size: 32px;
+                    }
+
+                }
+
+                p:nth-of-type(2) {
+                    line-height: 1.7;
+                    font-size: 19ypx;
+                    color: var(--theme-color-grey);
+                    margin-bottom: 30px;
+                    text-align: left;
+
+                    @media screen and (max-width : 480px) {
+                        font-size: 16px;
+                    }
+                }
+
+                .startNowButton {
+                    .start {
+                        padding: 15px 40px;
+                        font-weight: 500;
+
+                        @media screen and (max-width : 480px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .enginiearImg {
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    @media screen and (max-width : 768px) {
+                        padding-bottom: 50px;
+                    }
+
+                    @media screen and (max-width : 480px) {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

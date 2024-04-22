@@ -1,0 +1,75 @@
+
+@mixin heroBanner-heading-text
+{
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@mixin herobanner-subheading-text
+{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+@mixin text-30-800
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+@mixin text-22-800
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+@mixin text-header-icon-text-22
+{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+@mixin input-text-18
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@mixin submit-button-text
+{
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 18px;
+}
+
+@mixin Heading-Text-xl
+{
+    font-size: 52px;
+    font-weight: 800;
+    word-wrap: break-word;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.3;
+}
+
+@mixin construction-Sub-Heading-Text
+{
+    font-size: 22px;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+@mixin construction-servies-heading
+{
+    font-size: 52px;
+    line-height: 1.2;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+}

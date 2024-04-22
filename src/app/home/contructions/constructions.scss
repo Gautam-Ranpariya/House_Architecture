@@ -1,0 +1,76 @@
+@import '../../../styles/global.scss';
+
+.mainConstructions
+{
+    background-color: var(--theme-bg-lightwhite);
+    padding: 20px 100px 50px;
+    width: 100%;
+
+    @media screen and (max-width : 992px) {
+        padding: 20px 50px;
+    }
+
+    @media screen and (max-width : 768px) {
+        padding: 20px 40px;
+    }
+    @media screen and (max-width : 576px) {
+        padding: 20px 30px;
+    }
+
+    @media screen and (max-width : 480px) {
+        padding: 20px;
+    }
+
+    .constructionHeadingText
+    {
+        h2{
+            color: var(--theme-heading-color-orange);
+            @include Heading-Text-xl;
+            text-align: center;
+            
+            @media screen and (max-width : 768px) {
+                font-size: 42px;
+            }
+            
+            @media screen and (max-width : 480px) {
+                font-size: 32px;
+            }
+        }
+    }
+    .constructionSubHeadingText
+    {
+        text-align: center;
+        @include construction-Sub-Heading-Text;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+        color: var(--theme-color-grey);
+
+        @media screen and (max-width : 1024px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width : 768px) {
+            font-size: 18px;
+        }
+    }
+
+    .constructionReadButton
+    {
+        @include flex-center-center;
+        padding: 20px 0;
+
+        .readMore
+        {
+            .read{
+                padding: 15px 40px;
+                font-size: 18px;
+                text-align: center;
+
+                @media screen and (max-width : 768px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

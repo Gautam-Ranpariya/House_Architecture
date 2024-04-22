@@ -1,0 +1,241 @@
+@import '../../../styles/global.scss';
+
+.mainHeroBanner {
+    max-width: 100vw;
+    height: 800px;
+    position: relative;
+    // overflow-x: hidden;
+    background-image: url('../../../assets/images/enginiar.webp');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width : 1280) {
+        background-position: 60% 50%;
+    }
+    @media screen and (max-width : 768px) {
+        background-position: 68.8% 50%; 
+    }
+
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+
+    .layer2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        @include flex-center-start;
+        
+        @media screen and (max-width : 768px) {
+            align-items: flex-start;
+            padding-top: 50px;
+            padding-left: 30px;
+        }
+        @media screen and (max-width : 576px) {
+            padding: 0;
+        }
+
+        .data {
+            @include flex-center-center;
+            align-items: flex-start;
+            flex-direction: column;
+            z-index: 99;
+            padding: 10px 200px;
+            max-width: 1000px;            
+            
+            @media screen and (max-width :1280px) {
+                padding: 10px 100px 10px 50px;
+                max-width: 800px;
+            }
+
+            @media screen and (max-width : 768px) {
+                padding: 10px 20px;
+                max-width: 500px;
+            }
+
+            @media screen and (max-width : 576px) {
+                padding: 10px;
+                max-width: 400px;
+                margin-top: 120px;
+                margin: 10px;
+            }
+
+            @media screen and (max-width : 480px) {
+                max-width: 350px; 
+                margin-top: 120px;
+                margin-left: 10px;
+                padding: 5px;
+            }
+
+            @media screen and (max-width : 320px) {
+                padding: 0;
+                margin: 5px;
+                max-width: 280px;
+                padding-top: 120px;
+            }
+
+            .heroBannerHeadingText {
+
+                @include heroBanner-heading-text;
+                color: var(--theme-heading-color-orange);
+                margin-bottom: 30px;
+                text-align: left;
+                width: 100%;
+
+                @media screen and (max-width : 768px) {
+                    font-size: 80px;
+                }
+
+                @media screen and (max-width : 576px) {
+                    font-size: 62px;
+                }
+
+                @media screen and (max-width : 480px) {
+                    font-size: 52px;
+                }
+                
+                @media screen and (max-width : 320px) {
+                    font-size: 42px;
+                }
+            }
+
+            .heroBannerSubHeadingText {
+
+                width: 100%;
+                text-align: left;
+                text-wrap: wrap;
+                line-height: 1.7;
+                font-size: 20px;
+                margin-bottom: 30px;
+                color: var( --theme-herobanner-color-grey);
+                font-style: italic;
+
+                @media screen and (max-width : 768px) {
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width : 576px) {
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width : 480px) {
+                    font-size: 15px;
+                }
+
+                @media screen and (max-width : 320px) {
+                    padding: 20px 10px;
+                    margin: 0;
+                    font-size: 13px;
+                }
+            }
+
+            .herobannerFlex {
+                @include flex-center-start;
+                width: 100%;
+                margin-bottom: 100px;
+
+                @media screen and (max-width : 576px) {
+                    flex-direction: column;
+                    margin: 0 auto;
+                }
+
+                .inputemail {
+                    background-color: var(--theme-bg-white);
+                    width: 100%;
+                    padding: 10px 20px;
+                    
+                    @media screen and (max-width : 576px) {
+                        margin-bottom: 30px;
+                    }
+
+                    input[type=email] {
+                        font-size: 18px;
+
+                        @media screen and (max-width : 576px) {
+                            font-size: 16px;
+                        }
+        
+                        @media screen and (max-width : 480px) {
+                            font-size: 15px;
+                        }
+        
+                        @media screen and (max-width : 320px) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .submitButton {
+                    
+                    @media screen and (max-width : 576px) {
+                        margin-bottom: 30px;
+                        width: 100%;
+                    }
+
+                    .submit {
+                        width: 100%;
+                        display: block;
+                        padding: 10px 30px;
+
+                        @media screen and (max-width : 576px) {
+                            font-size: 16px;
+                        }
+        
+                        @media screen and (max-width : 480px) {
+                            font-size: 15px;
+                        }
+        
+                        @media screen and (max-width : 320px) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+            .imagelinks {
+                @media screen and (max-width : 576px) {
+                    width: 100%;
+                    margin: 10px auto;
+                }
+
+                p {
+                    font-style: italic;
+                    text-align: left;
+                    font-size: 20px;
+                    text-shadow: 0 0 10px rgba(255, 254, 254);
+                    color: var(--theme-color-black);
+
+                    @media screen and (max-width : 576px) {
+                        font-size: 16px;
+                    }
+    
+                    @media screen and (max-width : 480px) {
+                        font-size: 15px;
+                    }
+    
+                    @media screen and (max-width : 320px) {
+                        font-size: 13px;
+                    }
+
+                    a {
+                        color: var(--theme-color-black);
+
+                        &:hover
+                        {
+                            color: var(--theme-link-color-orange);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

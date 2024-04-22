@@ -1,0 +1,144 @@
+@import '../../../styles/global.scss';
+
+.mainMarketingCards {
+    width: 100%;
+    
+    .container {
+        padding: 100px 10px;
+        .innerMarketingCards {
+            padding: 0 80px;
+            @include grid-center-center-auto;
+
+            @media screen and (max-width : 1025px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media screen and (max-width : 992px) {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 30px;
+            }
+
+            @media screen and (max-width : 576px) {
+                grid-template-columns:  1fr;
+                padding: 0 20px;
+            }
+
+            .card{
+                padding: 20px 30px;
+                transition: all 0.3s ease-in-out; 
+
+                h2{
+                    font-size: 60px;
+                    color: var(--theme-card-color-white);
+                    text-align: left; 
+    
+                    @media screen and (max-width :768px) {
+                        font-size: 50px;
+                    }
+                }
+        
+                h3{
+                    margin-top: 20px;
+                    @include text-22-800;
+                    color: var(--theme-card-color-white);
+                    text-align: left; 
+    
+                }
+        
+                p{
+                    line-height: 1.5;
+                    margin-top: 20px;
+                    font-size: 18px;
+                    text-wrap: wrap;
+                    color: var(--theme-card-color-white);
+                    text-align: left; 
+    
+                }
+        
+                .leftAngleButton
+                {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+            }
+            // .item1
+            // {
+            //     background-color :  var(--theme-card-bg-orange);
+                
+            //     &:hover
+            //     {
+            //         background-color: var( --theme-card-bg-black);
+                    
+            //         h2,h3,p {
+            //             color: var(--theme-card-color-orange);
+            //         };
+
+            //         .leftAngleButton .angleBtn
+            //         {
+            //             background-color :  var(--theme-card-bg-orange);
+            //             color: var( --theme-card-color-white);
+            //         }
+            //     } 
+            // }
+            // .item2
+            // {
+            //     background-color :  var(--theme-card-bg-lightgreen); 
+            //     &:hover
+            //     {
+            //         background-color: var( --theme-card-bg-black);
+                    
+            //         h2,h3,p {
+            //             color : var( --theme-card-color-lightred);
+            //         };
+
+            //         .leftAngleButton .angleBtn
+            //         {
+            //             background-color :  var(--theme-card-bg-orange); 
+            //             color: var( --theme-card-color-white);
+            //         }
+            //     } 
+            // }
+            // .item3
+            // {
+            //     background-color : var(--theme-card-bg-purpul);
+            //     // color : var( --theme-marketing-angle-button-color-lightgrey);
+            //     &:hover
+            //     {
+            //         background-color: var( --theme-card-bg-black);
+                    
+            //         h2,h3,p {
+            //             color : var( --theme-card-color-lightred);
+            //         };
+
+            //         .leftAngleButton .angleBtn
+            //         {
+            //             background-color :  var(--theme-card-bg-orange); 
+            //             color: var( --theme-card-color-white);
+            //         }
+            //     }
+            // }
+            // .item4
+            // {
+            //     background-color : var(--theme-card-bg-lightblue);
+            //     // color : var( --theme-marketing-angle-button-color-darkgrey);
+            //     &:hover
+            //     {
+            //         background-color: var( --theme-card-bg-black);
+                    
+            //         h2,h3,p {
+            //             color : var( --theme-card-color-lightred);
+            //         };
+
+            //         .leftAngleButton .angleBtn
+            //         {
+            //             background-color :  var(--theme-card-bg-orange); 
+            //             color: var( --theme-card-color-white);
+            //         }
+            //     }
+            // }
+
+          
+        }
+
+    }
+}

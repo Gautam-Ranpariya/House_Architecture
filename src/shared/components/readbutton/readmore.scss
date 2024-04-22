@@ -1,0 +1,17 @@
+@import '../../../styles/global.scss';
+
+.readMore
+{
+    .read{
+        background-image: var(--theme-read-button-bg-linear);
+        color: var( --theme-button-color-white);
+        outline: none;
+        border: none;
+        cursor: pointer;
+            
+        &:hover
+        {
+            box-shadow: 5px 5px 20px #ea6932;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+@import '../../../styles/global.scss';
+
+.projectWork {
+    width: 100%;
+
+    .img {
+        height: 500px;
+        width: 100%;
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .container {
+        width: 100%;
+        margin-top: -150px;
+
+        .innerProject {
+            
+            width: 100%;
+            padding: 10px 50px;
+
+            @media screen and (max-width : 576px) {
+                padding: 0;
+            }
+
+            .projectsCard {
+                @include grid-3;
+                padding: 30 50px;
+                gap: 30px;
+
+                @media screen and (max-width : 1024px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media screen and (max-width : 768px) {
+                    grid-template-columns: 1fr;
+                }
+
+                @media screen and (max-width : 768px) {
+                    padding: 30px 20px;
+                }
+
+                @media screen and (max-width : 768px) {
+                    padding: 20px 10px;
+                }
+
+                .card {
+                    padding: 20px 30px;
+                    outline: var(--theme-service-card-outline1-grey);
+                    @include flex-center-center;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    background-color: var(--theme-card-bg-white);
+                    transition: all 0.5s ease-in-out; 
+
+                    @media screen and (max-width : 320px) {
+                        padding: 10px;
+                    }
+
+                    .logodiv {
+                        height: 99px;
+                        width: 99px;
+                        border-radius: 50%;
+                        margin-bottom: 20px;
+                        background-color: var(--theme-card-bg-orange);
+                        transition: all 0.5s ease-in-out; 
+                        @include flex-center-center;
+
+                        @media screen and (max-width : 320px) {
+                            height: 80px;
+                            width: 80px;
+                        }
+
+                        .img {
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            transform: scale(1);
+                            transition: all 0.5s ease-in-out; 
+
+                            &:hover
+                            {
+                                transform: scale(1.3);
+                                transition: all 0.5s ease-in-out; 
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        text-align: center;
+                        color: var(--theme-color-black);
+                        letter-spacing: 2px;
+                        transition: all 0.5s ease-in-out; 
+
+                        @media screen and (max-width : 480px) {
+                            font-size: 18px;
+                        }
+                    }
+
+                    span {
+                        text-align: center;
+                        line-height: 30px;
+                        color: var(--theme-color-black);
+                        font-size: 17px;
+                        font-style: italic;
+                        transition: all 0.5s ease-in-out; 
+
+                        @media screen and (max-width : 320px) {
+                            font-size: 15px;
+                            list-style: 22px;
+                        }
+                    }
+
+                    &:hover
+                    {
+                        background-color: var(--theme-card-bg-orange);
+
+                        .logodiv {
+                            background-color: var(--theme-card-bg-white);
+                            
+                            .img{
+                                color: var(--theme-card-color-orange);
+                            }
+                        }
+                        p, span{
+                            color: var(--theme-card-color-white);
+                        }
+                    }
+                    
+                }
+            }
+            .links
+            {
+                padding: 20px 0;
+                margin: 20px 0;
+
+                p{
+                    text-align: center;
+                    font-style: italic;
+                    font-size: 17px;
+                    letter-spacing: 1px;
+                    font-weight: 300;
+
+                    a{
+                        color: var(--theme-link-color-lightblue);
+                        font-weight: 550;
+
+                        &:hover
+                        {
+                            color: var(--theme-card-color-orange);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

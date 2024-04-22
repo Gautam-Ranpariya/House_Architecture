@@ -1,0 +1,109 @@
+@import '../../../styles/global.scss';
+
+.mainHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--theme-header-bg-white);
+    padding: 10px 70px;
+    z-index: 9999999999;
+    box-shadow: -1px 4px 17px 1px rgba(0,0,0,0.88);
+    -webkit-box-shadow: -1px 4px 17px 1px rgba(0,0,0,0.88);
+    -moz-box-shadow: -1px 4px 17px 1px rgba(0,0,0,0.88);
+
+    @media screen and (max-width : 768px) {
+        padding: 10px 30px;
+    }
+
+    @media screen and (max-width : 768px) {
+        padding: 10px;
+    }
+
+    .innerHeader {
+        padding: 5px 30px;
+        @include flex-center-between;
+
+        @media screen and (max-width : 768px) {
+            padding: 5px 10px;
+        }
+
+        @media screen and (max-width : 576px) {
+            padding: 5px;
+        }
+
+        .logo {
+            @include flex-center-start;
+            cursor: pointer;
+            
+            img {
+                width: 100%;
+                height: 60px;
+                padding: 5px;
+
+                @media screen and (max-width : 768px) {
+                    height: 50px;
+                }
+            }
+        }
+
+        .menu {
+            @include flex-center-end;
+            gap: 20px;
+
+            @media screen and (max-width : 320px) {
+                gap: 10px;
+            }
+
+            span {
+                display: block;
+                cursor: pointer;
+
+                @media screen and (max-width : 576px) {
+                    padding: 1px;
+                }
+                
+                .icon {
+                    @include text-header-icon-text-22;
+                    color: var(--theme-header-menu-icon-color-black);
+                    font-size: 25px;
+                    
+                    @media screen and (max-width: 576px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .linkedInIcon
+                {
+                   & :hover
+                    {  
+                        color: var(--theme-header-navigation-linkedIn-color);
+                      }
+                }
+
+                .feshbookIcon
+                {
+                   & :hover
+                    {  
+                        color: var(--theme-header-navigation-feshbook);
+
+                      }
+                }
+
+                .githubIcon
+                {
+                   & :hover
+                    {  
+                        color: var(--theme-header-navigation-github-color);
+                      }
+                }
+
+                .instagramIcon
+                {
+                   & :hover
+                    {  
+                        color: var(--theme-header-navigation-instagram-color);
+                      }
+                }
+        }
+    }
+}
